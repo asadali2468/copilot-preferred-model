@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Copilot Mode Auto-Select</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 14px; width: 280px; }
+      h3 { margin: 0 0 8px 0; }
+      label { display: block; font-weight: 600; margin-bottom: 6px; }
+      select { width: 100%; padding: 6px; }
+      button { margin-top: 10px; width: 100%; padding: 8px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+      button.secondary { background: #0f766e; }
+      /* Style for when elements are disabled */
+      select:disabled, button:disabled { background-color: #d1d5db; cursor: not-allowed; }
+      small { color: #555; display:block; margin-top:6px; }
+      .muted { color: #666; font-size: 12px; margin-top: 6px; }
+    </style>
+  </head>
+  <body>
+    <h3>Copilot Model Selector</h3>
+    <label for="preferredMode">Preferred Model</label>
+    <select id="preferredMode" disabled>
+      <option value="">Switch to a Copilot tab</option>
+    </select>
+    <button id="save" disabled>SAVE MODE</button>
+    <div class="muted" id="status"></div>
+    <small>Models are auto fetched from the Copilot Webpage.</small>
+    <script src="popup.js"></script>
+  </body>
+</html>
